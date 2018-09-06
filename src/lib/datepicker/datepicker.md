@@ -287,6 +287,18 @@ identical to the "Mat"-prefixed versions (`MatNativeDateModule` and `MatMomentDa
 they do not include the default formats. For example:
 
 ```ts
+export const MY_NATIVE_DATE_FORMATS = {
+  parse: {
+    dateInput: 'LL',
+  },
+  display: {
+    dateInput: 'LL',
+    monthYearLabel: 'MMM YYYY',
+    dateA11yLabel: 'LL',
+    monthYearA11yLabel: 'MMMM YYYY',
+  },
+};
+
 @NgModule({
   imports: [MatDatepickerModule, NativeDateModule],
   providers: [
